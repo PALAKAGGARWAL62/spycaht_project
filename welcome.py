@@ -1,26 +1,80 @@
 import pyttsx
-import sys
 from spy_details import spy_name,spy_age,spy_rating,spy_salutation
 
 engine = pyttsx.init()
+
+STATUS_MESSAGES = ['My name is Peter, Petty Peter', 'Shaken, not stirred.', 'Keeping the British end up, Sir']
+
+friends_name = []
+friends_age = []
+friends_rating = []
+friends_is_online = []
 
 engine.say("WELCOME TO SPY CHAT....")
 print'\t\t******************SPY CHAT******************'
 print' \t\t =================WELCOME================='
 
-def start_chat(spy_name,spy_age, spy_rating):
-    menu_choices = "What do you want to do? \n 1. Add a status update\n 2. \n 3. \n 4. \n 5. \n 6. Exit \n Your choice please : "
-    menu_choice = input(menu_choices)
-    if (menu_choice == 1):
-        # Add Status Update
-        print'UPDATE STATUS'
-    elif(menu_choice == 6):
-        # Exit Application
-        sys.exit()
+def add_status(current_status_message):
+
+    updated_status_message = None
+
+    if current_status_message != None:
+      print "Your current status message is " + current_status_message + "\n"
     else:
-        print 'INVALID CHOICE'
-    while(menu_choice!=6):
-        start_chat(spy_name,spy_age,spy_rating)
+      print 'You don\'t have any status message currently \n'
+
+    default = raw_input("Do you want to select from the existing status (y/n)? ")
+
+    if default.upper() == "N":
+        new_status_message = raw_input("What status message do you want to set?")
+        if len(new_status_message) > 0:
+            updated_status_message = new_status_message
+            STATUS_MESSAGES.append(updated_status_message)
+    elif default.upper() == 'Y':
+        item_position = 1
+        for message in STATUS_MESSAGES:
+            print item_position + ". " + message
+            item_position = item_position + 1
+        message_selection = input("\nChoose from the above messages ")
+        if len(STATUS_MESSAGES) >= message_selection:
+            updated_status_message = STATUS_MESSAGES[message_selection - 1]
+
+    return updated_status_message
+
+def add_friend():
+
+    new_name = raw_input("Please add your friend's name:")
+    new_salutation = raw_input("Are they Mr. or Ms.?: ")
+    new_name = new_name + " " + new_salutation
+    new_age = input("Age?")
+    new_rating = input("Spy rating?")
+
+    if len(new_name) > 0 and new_age > 12 and new_rating >= spy_rating:
+        # Add Friend
+        print 'add friend'
+    else:
+        print 'Sorry! Invalid entry. We can\'t add spy with the details you provided'
+
+    return len(friends_name)
+
+def start_chat(spy_name,spy_age, spy_rating):
+
+    current_status_message = None
+    show_menu=True
+
+    while show_menu:
+        menu_choices = "What do you want to do? \n 1. Add a status update\n 2. Add a friend \n 3. Send secret message \n 4. Read secret message \n 5. Read Chats from a user \n 6. Exit \n Your choice please : "
+        menu_choice = input(menu_choices)
+
+        if (menu_choice == 1):
+            # Add Status Update
+            print'UPDATE STATUS'
+            current_status_message=add_status(current_status_message)
+        elif(menu_choice == 6):
+            # Exit Application
+            show_menu=False
+        else:
+            print 'INVALID CHOICE'
 
 engine.say("WOULD YOU LIKE TO CONTINUE AS " + spy_name + " OR TO START AS A NEW USER?")
 engine.runAndWait()
