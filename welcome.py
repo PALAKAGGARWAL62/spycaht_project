@@ -1,18 +1,15 @@
 import pyttsx
-from spy_details import spy_name,spy_age,spy_rating,spy_salutation
+from spy_details import spy
 
 engine = pyttsx.init()
 
 STATUS_MESSAGES = ['My name is Peter, Petty Peter', 'Shaken, not stirred.', 'Keeping the British end up, Sir']
 
-friends_name = []
-friends_age = []
-friends_rating = []
-friends_is_online = []
-
 engine.say("WELCOME TO SPY CHAT....")
 print'\t\t******************SPY CHAT******************'
 print' \t\t =================WELCOME================='
+
+friends=[]
 
 def add_status(current_status_message):
 
@@ -33,7 +30,7 @@ def add_status(current_status_message):
     elif default.upper() == 'Y':
         item_position = 1
         for message in STATUS_MESSAGES:
-            print item_position + ". " + message
+            print str(item_position) + ". " + message
             item_position = item_position + 1
         message_selection = input("\nChoose from the above messages ")
         if len(STATUS_MESSAGES) >= message_selection:
@@ -41,21 +38,30 @@ def add_status(current_status_message):
 
     return updated_status_message
 
-def add_friend():
+def add_friend(spy_rating):
+    new_friend={'name':'','age':0,'rating':0.0,'is_online':False}
+    new_friend['name'] = raw_input("Please add your friend's name:")
+    new_friend['salutation'] = raw_input("Are they Mr. or Ms.?: ")
+    new_friend['name'] = new_friend['salutation']+" "+new_friend['name']
+    new_friend['age'] = input("Age?")
+    new_friend['rating'] = input("Spy rating?")
 
-    new_name = raw_input("Please add your friend's name:")
-    new_salutation = raw_input("Are they Mr. or Ms.?: ")
-    new_name = new_name + " " + new_salutation
-    new_age = input("Age?")
-    new_rating = input("Spy rating?")
-
-    if len(new_name) > 0 and new_age > 12 and new_rating >= spy_rating:
+    if len(new_friend['name']) > 0 and new_friend['age'] > 12 and new_friend['rating'] >= spy_rating:
         # Add Friend
-        print 'add friend'
+        friends.append(new_friend)
+        print 'FRIEND ADDED'
     else:
         print 'Sorry! Invalid entry. We can\'t add spy with the details you provided'
 
-    return len(friends_name)
+    return len(friends)
+
+def select_friend():
+    item_number=0
+    for friend in friends:
+        print '%s aged %d with spy rating %f is online' %(friend['name'],friend['age'],friend['rating'])
+        item_number+=1
+    friend_selected=input("\nChoose friend from above list")
+    print'Send message'
 
 def start_chat(spy_name,spy_age, spy_rating):
 
@@ -68,23 +74,32 @@ def start_chat(spy_name,spy_age, spy_rating):
 
         if (menu_choice == 1):
             # Add Status Update
-            print'UPDATE STATUS'
+            print'Add a status update'
             current_status_message=add_status(current_status_message)
+        elif(menu_choice == 2):
+            print'Add friend'
+            add_friend(spy_rating)
+        elif(menu_choice == 3):
+            print'Send Secret Message'
+        elif(menu_choice == 4):
+            print'Read secret message'
+        elif(menu_choice == 5):
+            print'Read Chats from a user'
         elif(menu_choice == 6):
             # Exit Application
             show_menu=False
         else:
             print 'INVALID CHOICE'
 
-engine.say("WOULD YOU LIKE TO CONTINUE AS " + spy_name + " OR TO START AS A NEW USER?")
+engine.say("WOULD YOU LIKE TO CONTINUE AS " + spy['name'] + " OR TO START AS A NEW USER?")
 engine.runAndWait()
-existing_spy = raw_input("WOULD YOU LIKE TO CONTINUE AS " + spy_name + " OR WANT TO START AS A NEW USER? (Y/N)")
+existing_spy = raw_input("WOULD YOU LIKE TO CONTINUE AS " +spy['salutation']+". "+ spy['name'] + "? (Y/N)")
 
 if existing_spy.upper()=='Y':
     engine.say("You can proceed")
     engine.runAndWait()
     print'You can proceed'
-    start_chat(spy_name, spy_age, spy_rating)
+    start_chat(spy['name'],spy['age'],spy['rating'])
 elif existing_spy.upper()=='N':
     spy_age = 0
     spy_rating = 0.0
@@ -146,4 +161,3 @@ else:
     engine.say('SORRY! INVALID CHOICE...PLEASE RETRY')
     engine.runAndWait()
     print('SORRY! INVALID CHOICE...PLEASE RETRY')
-
