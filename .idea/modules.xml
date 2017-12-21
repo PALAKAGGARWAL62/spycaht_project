@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../untitled/.idea/regular _exprssion.iml" filepath="$PROJECT_DIR$/../untitled/.idea/regular _exprssion.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spy_chat.iml" filepath="$PROJECT_DIR$/.idea/spy_chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test/.idea/test.iml" filepath="$PROJECT_DIR$/../test/.idea/test.iml" />
     </modules>
   </component>
 </project>

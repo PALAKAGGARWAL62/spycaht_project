@@ -1,0 +1,3 @@
+name,age,rating,is_online,password,email
+Ms Pari,16,4,True,$pbkdf2-sha256$29000$Qojx/v//X0vJubfWmtO61w$zSVdVarVH2G0U1jfJf7P4xg1F411zsMJ2iDfeJSfd18,pari@gmail.com
+Ms Palak,13,5,True,$pbkdf2-sha256$29000$8P5/7703xvh/DyHkfC8FgA$BRrOgEPWs.Ba6eHk1wjuwMcZqO/ttYef4spxSfJHInY,p@gmail.com
