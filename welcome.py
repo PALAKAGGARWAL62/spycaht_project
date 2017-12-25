@@ -1,3 +1,4 @@
+import imghdr
 import pyttsx
 from datetime import datetime
 from steganography.steganography import Steganography
@@ -108,28 +109,62 @@ def select_friend():
                 print'exception in select friend'
 
 
-def send_message():
+def send_message(sname):
+    flag=True
     friend_choice = select_friend()
-    original_image = raw_input("What is the name of the image?")
-    output_path = 'output.jpg'
-    text = raw_input("What do you want to say?")
-    Steganography.encode(original_image, output_path, text)
-    chatobj = ChatMessage(text,True)
-    friends[friend_choice].chats.append(chatobj)
-    with open('chats.csv','ab') as chatdata:
-        write = csv.writer(chatdata)
-        write.writerow([Spy.name,friends[friend_choice].name,text,datetime.now(),True])
-    print "Your secret message is ready!"
+    while flag:
+        original_image = raw_input("What is the name of the image?")
+        I=imghdr.what(original_image)
+        #print I
+        if I=='png' or I=='gif' or I=='bmp' or I =='xbm' or I=='pgm' or I=='jpeg':
+            output_path = 'output.'+I
+            text = raw_input("What do you want to say?")
+            Steganography.encode(original_image, output_path, text)
+            chatobj = ChatMessage(text,True)
+            with open ('chats.csv', 'ab') as chatdata:
+                write = csv.writer (chatdata)
+                write.writerow ([sname, friends[friend_choice].name, text, chatobj.time, True])
+            print "Your secret message is ready!"
+            flag = False
+            friends[friend_choice].chats.append(chatobj)
+        else:
+            print 'Wrong file format'
 
 
-def read_message():
+def read_message(sname):
     sender = select_friend()
     output_path = raw_input("What is the name of the file?")
     secret_text = Steganography.decode(output_path)
     cobj=ChatMessage(secret_text,False)
     friends[sender].chats.append(cobj)
     print "Your secret message has been saved!"
-    print friends[sender].chats
+    print friends[sender].name
+    print sname
+    with open('chats.csv','rb') as chat_data:
+        read=csv.reader(chat_data)
+        x=0
+        for row in read:
+            if row[0]==friends[sender].name and row[1]==sname:
+                print ' Message: "'+row[2]+'" \tsent on "'+row[3]+'"'
+                x+=1
+        if x==0:
+            print 'No message'
+
+
+def chat(sname):
+    sender = select_friend ()
+    x=0
+    with open('chats.csv','rb') as chatting:
+        read=csv.reader(chatting)
+        for row in read:
+            if row[0]==friends[sender].name and row[1]==sname:
+                print ' Message by "'+friends[sender].name+ '"\n"' +row[2]+ '" \tsent on "'+row[3]+'"'
+                x+=1
+            elif row[0]==sname and row[1]==friends[sender].name:
+                print ' Message by YOU \n"' + row[2] + '" \tsent on "' + row[3] + '"'
+                x += 1
+        if x==0:
+            print 'No CHATS'
 
 
 def start_chat(spy_name, spy_age, spy_rating):
@@ -157,16 +192,17 @@ def start_chat(spy_name, spy_age, spy_rating):
                 print'Send secret message'
                 engine.say ('Send secret message')
                 engine.runAndWait ()
-                send_message()
+                send_message(spy_name)
             elif (menu_choice == 4):
                 print'Read secret message'
-                read_message()
+                read_message(spy_name)
                 engine.say ('Read secret message')
                 engine.runAndWait ()
             elif (menu_choice == 5):
                 print'Read chats from a user'
                 engine.say ('Read chat from a user')
                 engine.runAndWait ()
+                chat(spy_name)
             elif (menu_choice == 6):
                 print'Friend list'
                 engine.say ('friend list')
@@ -180,7 +216,7 @@ def start_chat(spy_name, spy_age, spy_rating):
                 engine.say ('invalid choice')
                 engine.runAndWait ()
         except:
-            print'exception'
+            print 'exception in start chat'
 
 
 def login(name, password):
@@ -196,8 +232,8 @@ def login(name, password):
                   name = row[0]
                   age = row[1]
                   rating = row[2]
-                  Spy=spy(name,age,rating)
-                  start_chat(Spy.name,Spy.age,Spy.rating)
+                  Spy1=spy(name,age,rating)
+                  start_chat(Spy1.name,Spy1.age,Spy1.rating)
                   break;
           if c == 0:
               print'invalid name or password'
@@ -268,8 +304,8 @@ def new_user():
                             str (age) + " Spy Rating:" + str (rating) + " We are proud to have you on board!")
                 engine.runAndWait ()
                 print("You can proceed.")
-                Spy=spy(name,age,rating)
-                start_chat (Spy.name, Spy.age, Spy.rating)
+                Spy2=spy(name,age,rating)
+                start_chat (Spy2.name, Spy2.age, Spy2.rating)
             else:
                 print("Sorry! you are not of appropriate age to be a Spy.")
                 engine.say("Sorry! you are not of appropriate age to be a Spy.")
@@ -288,14 +324,15 @@ def new_user():
 
 engine.say("WOULD YOU LIKE TO CONTINUE AS " + Spy.name + " OR TO START AS A NEW USER?")
 engine.runAndWait()
-existing_spy = raw_input("WOULD YOU LIKE TO CONTINUE AS "+ Spy.name + "? (Y/N)")
+existing_spy = raw_input("WOULD YOU LIKE TO CONTINUE AS " + Spy.name + "? (Y/N)")
 
-if existing_spy.upper()=='Y':
+if existing_spy.upper() == 'Y':
     engine.say("You can proceed")
     engine.runAndWait()
     print'You can proceed'
     start_chat(Spy.name, Spy.age, Spy.rating)
-elif existing_spy.upper()=='N':
+
+elif existing_spy.upper() == 'N':
     flag = True
     while flag:
         try:
@@ -322,7 +359,8 @@ elif existing_spy.upper()=='N':
                 engine.say('Invalid choice')
                 engine.runAndWait()
         except:
-            print'exception'
+            print 'exception in user selection module'
+
 else:
     print 'Invalid Choice'
     engine.say('Invalid choice')

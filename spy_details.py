@@ -1,3 +1,4 @@
+from datetime import datetime
 class spy:
     def __init__(self,name,age,rating):
         self.name=name
@@ -10,7 +11,8 @@ class spy:
 class ChatMessage:
     def __init__(self, message, sent_by_me):
         self.message = message
-        self.time = datetime.now()
+        time = datetime.now()
+        self.time= time.strftime("%a, %d %b %Y %H:%M:%S")
         self.sent_by_me = sent_by_me
 
 Spy = spy('Mr Peter',15,3.2)
