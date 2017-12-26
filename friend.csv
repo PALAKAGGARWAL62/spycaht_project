@@ -1,17 +1,18 @@
-Ms Palak,17,4,True
-Mr Ravi,15,4.9,True
-Ms Ravika,18,4.2,True
-Mr Teddy,19,2.0,True
-Ms Palak,15,4,True
-Ms Ridhi,17,2,True
-Mr Rajat,16,4,True
-Ms Manpreet,15,4,True
-Ms Palak,15,4,True
-Mr Roger,15,3,True
-Ms Pari,17,2,True
-Er Hero,24,5,True
-Ms Rajni,17,3,True
-Ms Rajan,17,2,True
-Ms Palak,16,5,True
-Mr Roy,16,5,True
-Mr Peter,15,3.2,True
+he/she_is, friend_of, age, rating, is_online
+Ms Palak,Mr Peter,17,4,True
+Mr Ravi,Mr Peter,15,4.9,True
+Ms Ravika,Mr Peter,18,4.2,True
+Mr Teddy,Mr Peter,19,2.0,True
+Ms Palak,Mr Rajat,15,4,True
+Ms Ridhi,Mr Peter,17,2,True
+Mr Rajat,Mr Peter,16,4,True
+Ms Manpreet,Mr Rajat,15,4,True
+Ms Palak,Mr Rajat,17,4,True
+Mr Roger,Mr Rajat,15,3,True
+Ms Pari,Mr Rajat,17,2,True
+Er Hero,Mr Rajat,24,5,True
+Ms Rajni,Mr Rajat,17,3,True
+Ms Rajan,Mr Rajat,17,2,True
+Mr Roy,Mr Rajat,16,5,True
+Mr Peter,Mr Rajat,15,3.2,True
+Ms Pari,Mr Peter,16,4,True

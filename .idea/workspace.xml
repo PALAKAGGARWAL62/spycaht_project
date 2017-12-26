@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96402fb8-f3e4-4ef7-8586-71d4ab8143f8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/spy_chat.iml" afterPath="$PROJECT_DIR$/.idea/spy_chat.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/chats.csv" afterPath="$PROJECT_DIR$/chats.csv" />
       <change beforePath="$PROJECT_DIR$/friend.csv" afterPath="$PROJECT_DIR$/friend.csv" />
-      <change beforePath="$PROJECT_DIR$/output.jpg" afterPath="$PROJECT_DIR$/output.jpg" />
-      <change beforePath="$PROJECT_DIR$/pswdcheck.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output.jpeg" afterPath="$PROJECT_DIR$/output.jpeg" />
       <change beforePath="$PROJECT_DIR$/spy_details.py" afterPath="$PROJECT_DIR$/spy_details.py" />
-      <change beforePath="$PROJECT_DIR$/spy_list.csv" afterPath="$PROJECT_DIR$/spy_list.csv" />
       <change beforePath="$PROJECT_DIR$/welcome.py" afterPath="$PROJECT_DIR$/welcome.py" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/../test/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../test/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../test/braces.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../test/gravity.py" afterPath="$PROJECT_DIR$/../test/gravity.py" />
+      <change beforePath="$PROJECT_DIR$/../test/guessletters.py" afterPath="$PROJECT_DIR$/../test/guessletters.py" />
+      <change beforePath="$PROJECT_DIR$/../test/list10.py" afterPath="$PROJECT_DIR$/../test/list10.py" />
+      <change beforePath="$PROJECT_DIR$/../test/odd_even.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../test/test1.py" afterPath="$PROJECT_DIR$/../test/test1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +33,10 @@
     <SUITE FILE_PATH="coverage/spy_chat$checkpass.coverage" NAME="checkpass Coverage Results" MODIFIED="1513763029850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test" />
     <SUITE FILE_PATH="coverage/spy_chat$wordsearch.coverage" NAME="wordsearch Coverage Results" MODIFIED="1513600326604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test" />
     <SUITE FILE_PATH="coverage/spy_chat$guessletters.coverage" NAME="guessletters Coverage Results" MODIFIED="1513688147001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test" />
-    <SUITE FILE_PATH="coverage/spy_chat$welcome.coverage" NAME="welcome Coverage Results" MODIFIED="1514229350694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spy_chat$welcome.coverage" NAME="welcome Coverage Results" MODIFIED="1514295625760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spy_chat$bot.coverage" NAME="bot Coverage Results" MODIFIED="1514298637283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Insta_Bot_project" />
     <SUITE FILE_PATH="coverage/spy_chat$split.coverage" NAME="split Coverage Results" MODIFIED="1513599212080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test" />
+    <SUITE FILE_PATH="coverage/spy_chat$Insta_Bot.coverage" NAME="Insta_Bot Coverage Results" MODIFIED="1514288845421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../insta_bot" />
     <SUITE FILE_PATH="coverage/spy_chat$spy_login.coverage" NAME="spy_login Coverage Results" MODIFIED="1513837163512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spy_chat$gravity.coverage" NAME="gravity Coverage Results" MODIFIED="1513355288637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test" />
     <SUITE FILE_PATH="coverage/spy_chat$ctype.coverage" NAME="ctype Coverage Results" MODIFIED="1513601425706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test" />
@@ -40,51 +51,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="welcome.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/welcome.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="202" column="52" lean-forward="true" selection-start-line="202" selection-start-column="52" selection-end-line="202" selection-end-column="52" />
+            <state relative-caret-position="27">
+              <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
               <folding>
                 <element signature="e#584#1633#0" expanded="false" />
-                <element signature="e#1926#2840#0" expanded="false" />
-                <element signature="e#2868#3813#0" expanded="false" />
-                <element signature="e#3845#4702#0" expanded="false" />
-                <element signature="e#7948#8598#0" expanded="false" />
-                <element signature="e#8621#12385#0" expanded="false" />
-                <element signature="e#12615#12741#0" expanded="false" />
-                <element signature="e#12781#13842#0" expanded="false" />
-                <element signature="e#13854#13933#0" expanded="false" />
+                <element signature="e#1664#2001#0" expanded="false" />
+                <element signature="e#2031#3502#0" expanded="false" />
+                <element signature="e#3530#4894#0" expanded="false" />
+                <element signature="e#4927#5882#0" expanded="false" />
+                <element signature="e#6808#7468#0" expanded="false" />
+                <element signature="e#7492#8041#0" expanded="false" />
+                <element signature="e#8075#8703#0" expanded="false" />
+                <element signature="e#8726#12534#0" expanded="false" />
+                <element signature="e#12554#13722#0" expanded="false" />
+                <element signature="e#16300#16426#0" expanded="false" />
+                <element signature="e#16485#16564#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chats.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chats.csv">
+      <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Insta_Bot_project/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="7" column="66" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spy_details.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spy_details.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="friend.csv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="friend.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/friend.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="486">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,6 +99,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
               <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chats.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chats.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spy_details.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spy_details.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,8 +160,11 @@
         <option value="$PROJECT_DIR$/../untitled/image.py" />
         <option value="$PROJECT_DIR$/chats.csv" />
         <option value="$PROJECT_DIR$/spy_details.py" />
-        <option value="$PROJECT_DIR$/friend.csv" />
+        <option value="$PROJECT_DIR$/../insta_bot/data.txt" />
+        <option value="$PROJECT_DIR$/../insta_bot/Insta_Bot.py" />
+        <option value="$PROJECT_DIR$/../Insta_Bot_project/bot.py" />
         <option value="$PROJECT_DIR$/welcome.py" />
+        <option value="$PROJECT_DIR$/friend.csv" />
       </list>
     </option>
   </component>
@@ -174,11 +201,7 @@
           <expand>
             <path>
               <item name="spy_chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spy_chat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spy_chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="Insta_Bot_project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -191,6 +214,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -204,7 +228,45 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.welcome">
+  <component name="RunManager" selected="Python.bot">
+    <configuration name="Insta_Bot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../insta_bot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="insta_bot" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../insta_bot/Insta_Bot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="bot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Insta_Bot_project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Insta_Bot_project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Insta_Bot_project/bot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="image" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -243,44 +305,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="operators" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="test" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test/operators.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="spy_login" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="spy_chat" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spy_login.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="welcome" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,19 +325,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.spy_login" />
-      <item index="1" class="java.lang.String" itemvalue="Python.welcome" />
-      <item index="2" class="java.lang.String" itemvalue="Python.operators" />
-      <item index="3" class="java.lang.String" itemvalue="Python.match" />
-      <item index="4" class="java.lang.String" itemvalue="Python.image" />
+      <item index="0" class="java.lang.String" itemvalue="Python.welcome" />
+      <item index="1" class="java.lang.String" itemvalue="Python.match" />
+      <item index="2" class="java.lang.String" itemvalue="Python.image" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Insta_Bot" />
+      <item index="4" class="java.lang.String" itemvalue="Python.bot" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.welcome" />
-        <item index="1" class="java.lang.String" itemvalue="Python.image" />
-        <item index="2" class="java.lang.String" itemvalue="Python.match" />
-        <item index="3" class="java.lang.String" itemvalue="Python.operators" />
-        <item index="4" class="java.lang.String" itemvalue="Python.spy_login" />
+        <item index="0" class="java.lang.String" itemvalue="Python.bot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.welcome" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Insta_Bot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.image" />
+        <item index="4" class="java.lang.String" itemvalue="Python.match" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +365,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43657142" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43657142" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70857143" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12916666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -364,16 +388,18 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43657142" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39411098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39085713" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12916666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -387,57 +413,36 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../test/datetime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friend.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spy_list.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../untitled/basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../untitled/basics.py" />
     <entry file="file://$PROJECT_DIR$/welcome.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#584#1633#0" expanded="false" />
-            <element signature="e#1926#2840#0" expanded="false" />
-            <element signature="e#2868#3813#0" expanded="false" />
-            <element signature="e#3845#4702#0" expanded="false" />
-            <element signature="e#7948#8598#0" expanded="false" />
-            <element signature="e#8621#12385#0" expanded="false" />
-            <element signature="e#12615#12741#0" expanded="false" />
-            <element signature="e#12781#13842#0" expanded="false" />
-            <element signature="e#13854#13933#0" expanded="false" />
+            <element signature="e#1664#2001#0" expanded="false" />
+            <element signature="e#2031#3502#0" expanded="false" />
+            <element signature="e#3530#4894#0" expanded="false" />
+            <element signature="e#4927#5882#0" expanded="false" />
+            <element signature="e#6808#7468#0" expanded="false" />
+            <element signature="e#7492#8041#0" expanded="false" />
+            <element signature="e#8075#8703#0" expanded="false" />
+            <element signature="e#8726#12534#0" expanded="false" />
+            <element signature="e#12554#13722#0" expanded="false" />
+            <element signature="e#16300#16426#0" expanded="false" />
+            <element signature="e#16485#16564#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -485,14 +490,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#584#1633#0" expanded="false" />
-            <element signature="e#1926#2840#0" expanded="false" />
-            <element signature="e#2868#3813#0" expanded="false" />
-            <element signature="e#3845#4702#0" expanded="false" />
-            <element signature="e#7948#8598#0" expanded="false" />
-            <element signature="e#8621#12385#0" expanded="false" />
-            <element signature="e#12615#12741#0" expanded="false" />
-            <element signature="e#12781#13842#0" expanded="false" />
-            <element signature="e#13854#13933#0" expanded="false" />
+            <element signature="e#1664#2001#0" expanded="false" />
+            <element signature="e#2031#3502#0" expanded="false" />
+            <element signature="e#3530#4894#0" expanded="false" />
+            <element signature="e#4927#5882#0" expanded="false" />
+            <element signature="e#6808#7468#0" expanded="false" />
+            <element signature="e#7492#8041#0" expanded="false" />
+            <element signature="e#8075#8703#0" expanded="false" />
+            <element signature="e#8726#12534#0" expanded="false" />
+            <element signature="e#12554#13722#0" expanded="false" />
+            <element signature="e#16300#16426#0" expanded="false" />
+            <element signature="e#16485#16564#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -540,14 +548,17 @@
           <caret line="53" column="70" lean-forward="false" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="70" />
           <folding>
             <element signature="e#584#1633#0" expanded="false" />
-            <element signature="e#1926#2840#0" expanded="false" />
-            <element signature="e#2868#3813#0" expanded="false" />
-            <element signature="e#3845#4702#0" expanded="false" />
-            <element signature="e#7948#8598#0" expanded="false" />
-            <element signature="e#8621#12385#0" expanded="false" />
-            <element signature="e#12615#12741#0" expanded="false" />
-            <element signature="e#12781#13842#0" expanded="false" />
-            <element signature="e#13854#13933#0" expanded="false" />
+            <element signature="e#1664#2001#0" expanded="false" />
+            <element signature="e#2031#3502#0" expanded="false" />
+            <element signature="e#3530#4894#0" expanded="false" />
+            <element signature="e#4927#5882#0" expanded="false" />
+            <element signature="e#6808#7468#0" expanded="false" />
+            <element signature="e#7492#8041#0" expanded="false" />
+            <element signature="e#8075#8703#0" expanded="false" />
+            <element signature="e#8726#12534#0" expanded="false" />
+            <element signature="e#12554#13722#0" expanded="false" />
+            <element signature="e#16300#16426#0" expanded="false" />
+            <element signature="e#16485#16564#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -579,14 +590,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#584#1633#0" expanded="false" />
-            <element signature="e#1926#2840#0" expanded="false" />
-            <element signature="e#2868#3813#0" expanded="false" />
-            <element signature="e#3845#4702#0" expanded="false" />
-            <element signature="e#7948#8598#0" expanded="false" />
-            <element signature="e#8621#12385#0" expanded="false" />
-            <element signature="e#12615#12741#0" expanded="false" />
-            <element signature="e#12781#13842#0" expanded="false" />
-            <element signature="e#13854#13933#0" expanded="false" />
+            <element signature="e#1664#2001#0" expanded="false" />
+            <element signature="e#2031#3502#0" expanded="false" />
+            <element signature="e#3530#4894#0" expanded="false" />
+            <element signature="e#4927#5882#0" expanded="false" />
+            <element signature="e#6808#7468#0" expanded="false" />
+            <element signature="e#7492#8041#0" expanded="false" />
+            <element signature="e#8075#8703#0" expanded="false" />
+            <element signature="e#8726#12534#0" expanded="false" />
+            <element signature="e#12554#13722#0" expanded="false" />
+            <element signature="e#16300#16426#0" expanded="false" />
+            <element signature="e#16485#16564#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -597,14 +611,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#584#1633#0" expanded="false" />
-            <element signature="e#1926#2840#0" expanded="false" />
-            <element signature="e#2868#3813#0" expanded="false" />
-            <element signature="e#3845#4702#0" expanded="false" />
-            <element signature="e#7948#8598#0" expanded="false" />
-            <element signature="e#8621#12385#0" expanded="false" />
-            <element signature="e#12615#12741#0" expanded="false" />
-            <element signature="e#12781#13842#0" expanded="false" />
-            <element signature="e#13854#13933#0" expanded="false" />
+            <element signature="e#1664#2001#0" expanded="false" />
+            <element signature="e#2031#3502#0" expanded="false" />
+            <element signature="e#3530#4894#0" expanded="false" />
+            <element signature="e#4927#5882#0" expanded="false" />
+            <element signature="e#6808#7468#0" expanded="false" />
+            <element signature="e#7492#8041#0" expanded="false" />
+            <element signature="e#8075#8703#0" expanded="false" />
+            <element signature="e#8726#12534#0" expanded="false" />
+            <element signature="e#12554#13722#0" expanded="false" />
+            <element signature="e#16300#16426#0" expanded="false" />
+            <element signature="e#16485#16564#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -615,14 +632,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#584#1633#0" expanded="false" />
-            <element signature="e#1926#2840#0" expanded="false" />
-            <element signature="e#2868#3813#0" expanded="false" />
-            <element signature="e#3845#4702#0" expanded="false" />
-            <element signature="e#7948#8598#0" expanded="false" />
-            <element signature="e#8621#12385#0" expanded="false" />
-            <element signature="e#12615#12741#0" expanded="false" />
-            <element signature="e#12781#13842#0" expanded="false" />
-            <element signature="e#13854#13933#0" expanded="false" />
+            <element signature="e#1664#2001#0" expanded="false" />
+            <element signature="e#2031#3502#0" expanded="false" />
+            <element signature="e#3530#4894#0" expanded="false" />
+            <element signature="e#4927#5882#0" expanded="false" />
+            <element signature="e#6808#7468#0" expanded="false" />
+            <element signature="e#7492#8041#0" expanded="false" />
+            <element signature="e#8075#8703#0" expanded="false" />
+            <element signature="e#8726#12534#0" expanded="false" />
+            <element signature="e#12554#13722#0" expanded="false" />
+            <element signature="e#16300#16426#0" expanded="false" />
+            <element signature="e#16485#16564#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -633,14 +653,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#584#1633#0" expanded="false" />
-            <element signature="e#1926#2840#0" expanded="false" />
-            <element signature="e#2868#3813#0" expanded="false" />
-            <element signature="e#3845#4702#0" expanded="false" />
-            <element signature="e#7948#8598#0" expanded="false" />
-            <element signature="e#8621#12385#0" expanded="false" />
-            <element signature="e#12615#12741#0" expanded="false" />
-            <element signature="e#12781#13842#0" expanded="false" />
-            <element signature="e#13854#13933#0" expanded="false" />
+            <element signature="e#1664#2001#0" expanded="false" />
+            <element signature="e#2031#3502#0" expanded="false" />
+            <element signature="e#3530#4894#0" expanded="false" />
+            <element signature="e#4927#5882#0" expanded="false" />
+            <element signature="e#6808#7468#0" expanded="false" />
+            <element signature="e#7492#8041#0" expanded="false" />
+            <element signature="e#8075#8703#0" expanded="false" />
+            <element signature="e#8726#12534#0" expanded="false" />
+            <element signature="e#12554#13722#0" expanded="false" />
+            <element signature="e#16300#16426#0" expanded="false" />
+            <element signature="e#16485#16564#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -744,31 +767,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../untitled/basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../untitled/match.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../untitled/image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../untitled/basics.py" />
+    <entry file="file://$PROJECT_DIR$/../untitled/match.py" />
+    <entry file="file://$PROJECT_DIR$/../untitled/image.py" />
     <entry file="file://C:/ProgramData/Anaconda2/Lib/imghdr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pswdcheck.py" />
+    <entry file="file://$PROJECT_DIR$/../insta_bot/Insta_Bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../insta_bot/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spy_details.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -781,46 +809,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/friend.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pswdcheck.py" />
-    <entry file="file://$PROJECT_DIR$/spy_details.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chats.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Insta_Bot_project/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="66" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/welcome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="202" column="52" lean-forward="true" selection-start-line="202" selection-start-column="52" selection-end-line="202" selection-end-column="52" />
+        <state relative-caret-position="27">
+          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding>
             <element signature="e#584#1633#0" expanded="false" />
-            <element signature="e#1926#2840#0" expanded="false" />
-            <element signature="e#2868#3813#0" expanded="false" />
-            <element signature="e#3845#4702#0" expanded="false" />
-            <element signature="e#7948#8598#0" expanded="false" />
-            <element signature="e#8621#12385#0" expanded="false" />
-            <element signature="e#12615#12741#0" expanded="false" />
-            <element signature="e#12781#13842#0" expanded="false" />
-            <element signature="e#13854#13933#0" expanded="false" />
+            <element signature="e#1664#2001#0" expanded="false" />
+            <element signature="e#2031#3502#0" expanded="false" />
+            <element signature="e#3530#4894#0" expanded="false" />
+            <element signature="e#4927#5882#0" expanded="false" />
+            <element signature="e#6808#7468#0" expanded="false" />
+            <element signature="e#7492#8041#0" expanded="false" />
+            <element signature="e#8075#8703#0" expanded="false" />
+            <element signature="e#8726#12534#0" expanded="false" />
+            <element signature="e#12554#13722#0" expanded="false" />
+            <element signature="e#16300#16426#0" expanded="false" />
+            <element signature="e#16485#16564#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friend.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
