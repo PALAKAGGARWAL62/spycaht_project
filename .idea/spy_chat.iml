@@ -9,6 +9,7 @@
     <orderEntry type="module" module-name="untitled1" />
     <orderEntry type="module" module-name="insta_bot" />
     <orderEntry type="module" module-name="Insta_Bot_project" />
+    <orderEntry type="module" module-name="socket" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="Nosetests" />

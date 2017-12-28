@@ -3,11 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Insta_Bot_project/.idea/Insta_Bot_project.iml" filepath="$PROJECT_DIR$/../Insta_Bot_project/.idea/Insta_Bot_project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../insta_bot/.idea/insta_bot.iml" filepath="$PROJECT_DIR$/../insta_bot/.idea/insta_bot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../untitled/.idea/regular _exprssion.iml" filepath="$PROJECT_DIR$/../untitled/.idea/regular _exprssion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../socket/.idea/socket.iml" filepath="$PROJECT_DIR$/../socket/.idea/socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spy_chat.iml" filepath="$PROJECT_DIR$/.idea/spy_chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/../test/.idea/test.iml" filepath="$PROJECT_DIR$/../test/.idea/test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../untitled1/.idea/untitled1.iml" filepath="$PROJECT_DIR$/../untitled1/.idea/untitled1.iml" />
     </modules>
   </component>
 </project>
