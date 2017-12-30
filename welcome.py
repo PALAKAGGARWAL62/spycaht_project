@@ -203,25 +203,25 @@ def send_message(sname):  # sending message hidden in image
                     original_image = raw_input ("What is the name of the image?")
                     # checking image format
                     image_format = imghdr.what (original_image)
-                    if image_format == 'png' or image_format == 'gif' or image_format == 'bmp' or image_format == 'xbm' or \
-                            image_format == 'pgm' or image_format == 'jpeg':
+                    if image_format == 'png' or image_format == 'gif' or image_format == 'bmp' or image_format == 'xbm'\
+                            or image_format == 'pgm' or image_format == 'jpeg':
                         output_path = 'output' + str (x) + '.' + image_format
                         Steganography.encode (original_image, output_path, word)
                         x += 1
+                        chat_obj = ChatMessage (word, True)
+                        # writing message to csv
+                        try:
+                            with open ('chats.csv', 'ab') as chat_data:
+                                write = csv.writer (chat_data)
+                                write.writerow ([sname, friends[friend_choice].name, word, chat_obj.time, True])
+                                print "Your secret message is ready!"
+                                flag = False
+                                friends[friend_choice].chats.append (chat_obj)
+                        except Exception as e:
+                            print e
+                            print 'exception in writing text to file'
                     else:
                         print 'Wrong file format'
-                chat_obj = ChatMessage (text, True)
-                # writing message to csv
-                try:
-                    with open ('chats.csv', 'ab') as chat_data:
-                        write = csv.writer (chat_data)
-                        write.writerow ([sname, friends[friend_choice].name, text, chat_obj.time, True])
-                        print "Your secret message is ready!"
-                        flag = False
-                        friends[friend_choice].chats.append (chat_obj)
-                except Exception as e:
-                    print e
-                    print 'exception in writing text to file'
         except Exception as e:
             print e
             print 'exception in sending message'
@@ -229,29 +229,17 @@ def send_message(sname):  # sending message hidden in image
 
 # function to read messages by particular friend
 def read_message(sname):
+    sender = select_friend (sname)
+    message = ''
+    n = input('Enter the Number of images')
     try:
-        sender = select_friend (sname)
-        output_path = raw_input ("What is the name of the file?")
-        secret_text = Steganography.decode (output_path)  # decoding text hidden in image
-        chat_obj = ChatMessage (secret_text, False)
+        for x in range (n):
+            output_path = raw_input ("What is the name of the file?")
+            secret_text = Steganography.decode (output_path)  # decoding text hidden in image
+            message += secret_text + ' '
+        chat_obj = ChatMessage (message, False)
         friends[sender].chats.append (chat_obj)
-        print "Your secret message has been saved!"
-        print 'SENDER: ' + friends[sender].name
-        print 'RECEIVER: ' + sname
-        try:
-            with open ('chats.csv', 'rb') as chat_data:
-                read = csv.reader (chat_data)
-                x = 0
-                for row in read:
-                    # comparing your and sender name to read message
-                    if row[0] == friends[sender].name and row[1] == sname:
-                        print ' Message: "' + row[2] + '" \tsent on "' + row[3] + '"'
-                        x += 1
-                if x == 0:
-                    print 'No message'
-        except Exception as e:
-            print e
-            print 'error in reading file in read message'
+        print message
     except Exception as e:
         print e
         print 'exception in decoding message'
@@ -602,3 +590,5 @@ else:
     print 'Invalid Choice'
     engine.say ('Invalid choice')
     engine.runAndWait ()
+
+
