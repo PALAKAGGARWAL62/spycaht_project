@@ -19,6 +19,9 @@ from spy_details import spy, ChatMessage, Spy
 # for live chat
 import socket
 
+# for downloading image from net
+from imagesoup import ImageSoup
+
 # activate voice engine
 engine = pyttsx.init ()
 
@@ -186,6 +189,17 @@ def select_friend(sname):
                 print'exception in select friend'
 
 
+# function to download image from internet
+def image_download():
+    soup = ImageSoup ()
+    image_name = raw_input('Enter image name: ')
+    images = soup.search (image_name, image_size='icon', aspect_ratio='square')
+    im = images[0]
+    im.URL
+    im.size
+    im.show ()
+
+
 # function to send message by encoding it word by word to different images
 def send_message(sname):  # sending message hidden in image
     flag = True
@@ -200,10 +214,18 @@ def send_message(sname):  # sending message hidden in image
                 # encoding text word by word in image
                 for word in text:
                     # path of image
+                    image_choice = input('1. Download image from internet \n2. Use existing image')
+                    if image_choice == 1:
+                        print 'Save image from internet \n'
+                        image_download()
+                    elif image_choice == 2:
+                        print 'You can proceed'
+                    else:
+                        print 'Invalid Choice'
                     original_image = raw_input ("What is the name of the image?")
                     # checking image format
                     image_format = imghdr.what (original_image)
-                    if image_format == 'png' or image_format == 'gif' or image_format == 'bmp' or image_format == 'xbm'\
+                    if image_format == 'png' or image_format == 'gif' or image_format == 'BMP' or image_format == 'xbm'\
                             or image_format == 'pgm' or image_format == 'jpeg':
                         output_path = 'output' + str (x) + '.' + image_format
                         Steganography.encode (original_image, output_path, word)
@@ -270,8 +292,8 @@ def live_chat(sname):
         s = socket.socket ()
         port = 12222
         ip = '127.0.0.1'
-        c = input ('PRESS \n 1. SERVER\n 2. CLIENT')
-        if c == 1:
+        ch = input ('PRESS \n 1. SERVER\n 2. CLIENT')
+        if ch == 1:
             s.bind ((ip, port))
             s.listen (5)
             cname = raw_input ('Enter friend name: ')
@@ -295,7 +317,7 @@ def live_chat(sname):
                         print e
                         print 'exception in writing text to file'
             c.close ()
-        if c == 2:
+        if ch == 2:
             s.connect ((ip, port))
             cname = raw_input ('Enter friend name: ')
             while True:
