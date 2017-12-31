@@ -193,11 +193,13 @@ def select_friend(sname):
 def image_download():
     soup = ImageSoup ()
     image_name = raw_input('Enter image name: ')
-    images = soup.search (image_name, image_size='icon', aspect_ratio='square')
+    images = soup.search (image_name, image_size='medium', aspect_ratio='square')
     im = images[0]
     im.URL
     im.size
     im.show ()
+    im.main_color (n=2)
+    im.to_file (image_name+'.jpg')
 
 
 # function to send message by encoding it word by word to different images
