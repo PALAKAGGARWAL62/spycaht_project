@@ -22,6 +22,9 @@ import socket
 # for downloading image from net
 from imagesoup import ImageSoup
 
+# to use different colors in text
+from termcolor import colored
+
 # activate voice engine
 engine = pyttsx.init ()
 
@@ -112,9 +115,9 @@ def add_friend(sname):
                         engine.runAndWait ()
             if x == 0:
                 print 'Sorry! Invalid entry. We can\'t add spy with the details you provided'
-                return add_friend (sname)
                 engine.say ('Sorry! Invalid entry. We can\'t add spy with the details you provided')
                 engine.runAndWait ()
+                return add_friend (sname)
             return len (friends)
     except Exception as e:
         print e
@@ -192,14 +195,27 @@ def select_friend(sname):
 # function to download image from internet
 def image_download():
     soup = ImageSoup ()
-    image_name = raw_input('Enter image name: ')
+    image_name = raw_input ('Enter image name: ')
     images = soup.search (image_name, image_size='medium', aspect_ratio='square')
     im = images[0]
     im.URL
     im.size
     im.show ()
     im.main_color (n=2)
-    im.to_file (image_name+'.jpg')
+    im.to_file (image_name + '.jpg')
+
+
+# function to tackle special messages
+def special_message(original_image, output_path, text):
+    if text == 'SOS':
+        text = 'Shop_for_Sure.'
+    elif text == 'Save':
+        text = 'Shape_Vender_Event'
+    elif text == 'Emergency':
+        text = 'Apna_sapna_money'
+    elif text == 'Secrecy':
+        text = 'Dazzle_Blind'
+    Steganography.encode (original_image, output_path, text)
 
 
 # function to send message by encoding it word by word to different images
@@ -216,10 +232,10 @@ def send_message(sname):  # sending message hidden in image
                 # encoding text word by word in image
                 for word in text:
                     # path of image
-                    image_choice = input('1. Download image from internet \n2. Use existing image')
+                    image_choice = input ('1. Download image from internet \n2. Use existing image')
                     if image_choice == 1:
                         print 'Save image from internet \n'
-                        image_download()
+                        image_download ()
                     elif image_choice == 2:
                         print 'You can proceed'
                     else:
@@ -227,12 +243,19 @@ def send_message(sname):  # sending message hidden in image
                     original_image = raw_input ("What is the name of the image?")
                     # checking image format
                     image_format = imghdr.what (original_image)
-                    if image_format == 'png' or image_format == 'gif' or image_format == 'BMP' or image_format == 'xbm'\
+                    if image_format == 'png' or image_format == 'gif' or image_format == 'BMP' or image_format == 'xbm' \
                             or image_format == 'pgm' or image_format == 'jpeg':
                         output_path = 'output' + str (x) + '.' + image_format
+
+                        if word == "SOS" or word == "Emergency" or word == "Save" or word == "Secrecy":
+                            special_message (original_image, output_path, word)
+
                         Steganography.encode (original_image, output_path, word)
+
                         x += 1
+
                         chat_obj = ChatMessage (word, True)
+
                         # writing message to csv
                         try:
                             with open ('chats.csv', 'ab') as chat_data:
@@ -255,7 +278,7 @@ def send_message(sname):  # sending message hidden in image
 def read_message(sname):
     sender = select_friend (sname)
     message = ''
-    n = input('Enter the Number of images')
+    n = input ('Enter the Number of images')
     try:
         for x in range (n):
             output_path = raw_input ("What is the name of the file?")
@@ -263,7 +286,7 @@ def read_message(sname):
             message += secret_text + ' '
         chat_obj = ChatMessage (message, False)
         friends[sender].chats.append (chat_obj)
-        print message
+        print colored ("Your message is saved!", 'blue', attrs=['blink'])
     except Exception as e:
         print e
         print 'exception in decoding message'
@@ -278,11 +301,15 @@ def chat(spy_name):
         for row in read:
             # comparing sender and receiver name to view message from friend
             if row[0] == friends[sender].name and row[1] == spy_name:
-                print ' Message by "' + friends[sender].name + '"\n"' + row[2] + '" \tsent on "' + row[3] + '"'
+                print ' Message by "' + colored (friends[sender].name, 'red', attrs=['underline', 'blink']) \
+                      + '"\n"' + colored (row[2], attrs=['bold', 'concealed']) \
+                      + '" \tsent on "' + colored (row[3], 'blue', attrs=['blink']) + '"'
                 x += 1
             # checking your own message
             elif row[0] == spy_name and row[1] == friends[sender].name:
-                print ' Message by YOU \n"' + row[2] + '" \tsent on "' + row[3] + '"'
+                print colored (' Message by YOU ', 'red', attrs=['underline', 'blink']) + '\n"' + \
+                      colored (row[2], attrs=['bold', 'concealed']) + \
+                      '" \tsent on "' + colored (row[3], 'blue', attrs=['blink']) + '"'
                 x += 1
         if x == 0:
             print 'No CHATS'
@@ -614,5 +641,3 @@ else:
     print 'Invalid Choice'
     engine.say ('Invalid choice')
     engine.runAndWait ()
-
-
